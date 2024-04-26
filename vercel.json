@@ -12,8 +12,13 @@
       "dest": "/app.py"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/templates/(.*)",
-      "dest": "/templates/balance_equation.html"
+      "dest": "/templates/$1"
     }
   ]
 }
+
