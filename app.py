@@ -1,9 +1,10 @@
-from flask import Flask, request, render_template
-from chempy import balance_stoichiometry
-import matplotlib.pyplot as plt
-import io
 import base64
-from waitress import serve
+import io
+
+import matplotlib.pyplot as plt
+from chempy import balance_stoichiometry
+from flask import Flask, request, render_template
+
 
 # Define a function to balance a chemical equation
 def balance_chemical_equation(reactants, products):
@@ -58,5 +59,3 @@ def balance_equation():
     return render_template('balance_equation.html')
 
 
-if __name__ == '__main__':
-    serve(app, host='127.0.0.1', port=8080)
